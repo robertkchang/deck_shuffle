@@ -17,6 +17,7 @@ func main() {
   fmt.Println("=======================")
 
   // shuffle
+  // TODO: would like the call to be deck.Shuffle
   shuffled := shuffle.Shuffle(original)
   fmt.Println("[SHUFFLED] ", shuffled)
 }
