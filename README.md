@@ -1,4 +1,4 @@
-## Deck shuffle
+## Deck Shuffle
 
 #### Getting Started
 ```
