@@ -31,13 +31,13 @@ var Values = []string{
 
 // Card struct
 type Card struct {
-  value string
-  suite string
+  Value string
+  Suite string
 }
 
 // Card's to String
 func (card Card) String() string {
-  return fmt.Sprintf("%s", "{"+card.value+"|"+card.suite+"}")
+  return fmt.Sprintf("%s", "{"+card.Value+"|"+card.Suite+"}")
 }
 
 // New deck of cards
@@ -47,7 +47,7 @@ func New() []Card {
   var cardCnt = 0
   for _, suite := range Suites {
     for _, value := range Values {
-      deck[cardCnt] = Card{value: value, suite: suite}
+      deck[cardCnt] = Card{Value: value, Suite: suite}
       cardCnt++
     }
   }

@@ -4,3 +4,8 @@
 ```
 go run main.go
 ```
+
+#### Running Tests
+```
+go test ./...
+```
