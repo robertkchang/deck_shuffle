@@ -13,6 +13,7 @@ import (
 // thus, when the slice is updated, the array values are updated
 // https://stackoverflow.com/questions/39993688/are-golang-slices-pass-by-value
 func Shuffle(arr []deck.Card) ([]deck.Card, error) {
+  // check if deck is nil or empty
   if arr == nil || len(arr) == 0 {
     return nil, errors.New("deck.Card is missing or empty")
   }

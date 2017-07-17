@@ -41,7 +41,7 @@ func TestShuffleNilDeck(t *testing.T) {
 }
 
 func TestShuffleEmptyDeck(t *testing.T) {
-  // shuffle with no deck
+  // shuffle with empty deck
   var emptyDeck []deck.Card
   _, error := Shuffle(emptyDeck)
   assert.EqualError(t, error, "deck.Card is missing or empty")
