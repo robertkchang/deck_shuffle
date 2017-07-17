@@ -1,9 +1,10 @@
 package main
 
 import (
-	"testing"
+  "testing"
 )
 
 func TestMain(t *testing.T) {
-	main()
+  // not a test - just making sure main() works
+  main()
 }
