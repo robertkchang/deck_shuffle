@@ -10,11 +10,6 @@ func TestNew(t *testing.T) {
   assert.Equal(t, len(newDeck), 52, "New deck should contain 52 cards")
 }
 
-func TestString(t *testing.T) {
-  aCard := Card{Value: "Ace", Suite: "Club"}
-  assert.Equal(t, aCard.String(), "{Ace|Club}")
-}
-
 func TestShuffle(t *testing.T) {
   // init new deck
   newDeck := New()
