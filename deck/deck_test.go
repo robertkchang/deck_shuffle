@@ -33,6 +33,19 @@ func TestShuffle(t *testing.T) {
     }
   }
   assert.NotEqual(t, numOfSameCards, 10, "First ten cards in shuffled deck same as original deck")
+
+  // validate there are no duplicates after shuffle
+  existMap := make(map[string]int)
+  for _, card := range shuffledDeck {
+    if _, ok := existMap[card.String()]; ok {
+      // found a duplicate - fail the test immediately and break out of loop
+      assert.Fail(t, "Duplicate found: ", card.String())
+      break
+    } else {
+      // no duplicate - just increment counter in existMap
+      existMap[card.String()]++
+    }
+  }
 }
 
 func TestShuffleNilDeck(t *testing.T) {
